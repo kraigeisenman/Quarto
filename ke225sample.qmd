@@ -1,0 +1,21 @@
+---
+title: "Sample Quarto Document"
+format: html
+---
+
+# Introduction
+This is a basic example of a Quarto document. Below is a simple data visualization created using R.
+
+# Data Visualization
+Here's a bar chart of the `mtcars` dataset:
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+
+# Create a simple bar chart
+ggplot(mtcars, aes(x = as.factor(cyl))) +
+  geom_bar() +
+  labs(title = "Car Distribution by Cylinder",
+       x = "Number of Cylinders",
+       y = "Count")
